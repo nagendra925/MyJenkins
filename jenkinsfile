@@ -1,0 +1,17 @@
+lines (15 sloc)  201 Bytes
+
+pipeline {
+  agent any
+  stages {
+    stage('verify version') {
+      steps {
+        sh 'perl --version'
+      }
+    }
+    stage('hello') {
+      steps {
+        sh 'perl hello.pl'
+      }
+    }
+  }
+}
